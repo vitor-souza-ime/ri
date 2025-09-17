@@ -83,6 +83,4 @@ Contribuições são bem-vindas! Para contribuir, siga os passos:
 
 Este projeto está licenciado sob a **MIT License**. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-
-Se você quiser, posso criar **uma versão do README.md mais visual**, com badges de status, imagens do NAO e instruções de execução mais detalhadas para cada módulo do framework. Quer que eu faça isso?
 ```
