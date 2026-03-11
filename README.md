@@ -2,51 +2,52 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## Descrição
+## Description
 
-O **RobotInterface** é um framework modular desenvolvido para interação multimodal com o robô humanoide NAO da Aldebaran Robotics. Ele integra capacidades de visão computacional, reconhecimento de voz, controle de movimento e expressões emocionais em uma arquitetura unificada, facilitando o desenvolvimento de aplicações interativas com o robô.
+**RobotInterface** is a modular framework designed for multimodal interaction with the **NAO humanoid robot** developed by Aldebaran Robotics. The framework integrates computer vision, speech recognition, motion control, and emotional expression capabilities into a unified architecture, facilitating the development of interactive robotic applications.
 
-O framework permite que pesquisadores e desenvolvedores criem comportamentos complexos de forma simplificada, promovendo maior reutilização de código e redução da complexidade de programação.
+The framework allows researchers and developers to create complex robot behaviors in a simplified way, promoting code reuse and reducing programming complexity.
 
-Mais informações estão disponíveis no repositório: [RobotInterface](https://github.com/vitor-souza-ime/ri)
-
----
-
-## Funcionalidades
-
-- **Visão Computacional**: detecção e classificação de objetos em tempo real usando o modelo CLIP (Contrastive Language-Image Pre-training).
-- **Reconhecimento de Voz**: processamento de comandos de voz e interpretação de linguagem natural.
-- **Controle de Movimento**: execução de movimentos e gestos do NAO.
-- **Expressões Emocionais**: controle de LEDs, olhos e movimentos faciais para expressar emoções.
-- **Arquitetura Modular**: cada funcionalidade é implementada em módulos independentes, permitindo fácil integração e manutenção.
+More information is available in the repository:
+[RobotInterface](https://github.com/vitor-souza-ime/ri)
 
 ---
 
-## Instalação
+## Features
 
-1. Clone o repositório:
+* **Computer Vision**: real-time object detection and classification using the **CLIP (Contrastive Language–Image Pre-training)** model.
+* **Speech Recognition**: processing of voice commands and natural language interpretation.
+* **Motion Control**: execution of NAO movements and gestures.
+* **Emotional Expressions**: control of LEDs, eyes, and facial movements to express emotions.
+* **Modular Architecture**: each functionality is implemented as an independent module, allowing easy integration and maintenance.
+
+---
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/vitor-souza-ime/ri.git
-````
+```
 
-2. Entre na pasta do projeto:
+2. Enter the project directory:
 
 ```bash
 cd ri
 ```
 
-3. Instale as dependências (exemplo com pip):
+3. Install the dependencies (example using pip):
 
 ```bash
 pip install -r requirements.txt
 ```
 
-> Observação: o NAO V6 utiliza Python 2.7, então pode ser necessário configurar processamento remoto (*brain transfer*) para certas funcionalidades avançadas.
+> **Note:** NAO V6 uses **Python 2.7**, so remote processing (*brain transfer*) may be required for some advanced functionalities.
 
 ---
 
-## Exemplo de Uso
+## Usage Example
 
 ```python
 from RobotInterface import RobotInterface
@@ -57,30 +58,28 @@ model = "NAOV6"
 
 nao = RobotInterface(ip, port, model)
 
-# Exemplo: mover o braço
+# Example: move the arm
 nao.move_arm("left", 45)
 
-# Exemplo: detectar objeto
-objeto = nao.detect_object("bola")
-print(objeto)
+# Example: detect an object
+object_detected = nao.detect_object("ball")
+print(object_detected)
 ```
 
 ---
 
-## Contribuição
+## Contributing
 
-Contribuições são bem-vindas! Para contribuir, siga os passos:
+Contributions are welcome! To contribute, follow these steps:
 
-1. Faça um fork do repositório.
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`).
-3. Faça commit das suas alterações (`git commit -am 'Adiciona nova funcionalidade'`).
-4. Envie para o repositório remoto (`git push origin feature/nova-funcionalidade`).
-5. Abra um Pull Request.
+1. Fork the repository.
+2. Create a branch for your feature (`git checkout -b feature/new-feature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the remote repository (`git push origin feature/new-feature`).
+5. Open a Pull Request.
 
 ---
 
-## Licença
+## License
 
-Este projeto está licenciado sob a **MIT License**. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-```
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
